@@ -1,12 +1,18 @@
-# We will load your real ML models here later
-# For now this returns dummy predictions so we can test the API
+import joblib
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Points to backend/models/
+category_model = joblib.load(os.path.join(BASE_DIR, "models", "model1.pkl"))
+priority_model = joblib.load(os.path.join(BASE_DIR, "models", "model2.pkl"))
+
 
 def classify_complaint(text: str) -> str:
-    """Returns the category of the complaint"""
-    # Replace this with: model.predict([text])[0]
-    return "General"
+    result = category_model.predict([text])
+    return str(result[0])
+
 
 def predict_priority(text: str) -> str:
-    """Returns the priority level of the complaint"""
-    # Replace this with: priority_model.predict([text])[0]
-    return "Medium"
+    result = priority_model.predict([text])
+    return str(result[0])

@@ -1,0 +1,18 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+.venv
+venv/
+env/
+
+# ── Jupyter Notebook ──
+.ipynb_checkpoints/
+
+# ── Environment Variables ──
+.env
+.env.local
+
+# ── OS Files ──
+Thumbs.db
+.DS_Store
