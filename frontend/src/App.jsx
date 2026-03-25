@@ -1,6 +1,6 @@
 import { useState } from "react";
-import LandingPage from "./pages/landingpage";
-import ComplaintForm from "./pages/complaintform";
+import LandingPage from "./pages/LandingPage";
+import ComplaintForm from "./pages/ComplaintForm";
 import ResultPage from "./pages/ResultPage";
 import HistoryPage from "./pages/HistoryPage"; 
 
