@@ -17,3 +17,13 @@ export async function submitComplaint(form) {
 
   return response.json();
 }
+
+export async function fetchComplaints() {
+  const response = await fetch(`${BASE_URL}/api/complaints`);
+
+  if (!response.ok) {
+    throw new Error(`Server error: ${response.status}`);
+  }
+
+  return response.json();
+}

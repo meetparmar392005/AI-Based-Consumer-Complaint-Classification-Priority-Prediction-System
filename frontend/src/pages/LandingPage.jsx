@@ -1,12 +1,15 @@
-export default function LandingPage({ onStart }) {
+export default function LandingPage({ onStart, onHistory }) {
   return (
     <div className="landing">
 
       {/* SECTION 1: Top navigation bar */}
       <nav className="nav">
-        <div className="nav-logo">⬡ ResolveAI</div>
-        <button onClick={onStart}>File Complaint →</button>
-      </nav>
+  <div className="nav-logo">⬡ ResolveAI</div>
+  <div style={{ display: "flex", gap: "10px" }}>
+    <button onClick={onHistory}>View History</button> {/* ← ADD */}
+    <button onClick={onStart}>File Complaint →</button>
+  </div>
+  </nav>
 
       {/* SECTION 2: Hero — main headline + button */}
       <main className="landing-main">
